@@ -5,6 +5,11 @@
     padding-right: 10px;
     padding-top: 20px;
     padding-bottom: 20px;
+
+    @include mq.set-breakpoint('medium') {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
 
 .project-list {
@@ -18,6 +23,11 @@
     border: 1px solid black;
     border-radius: 5px;
     padding: 10px;
+
+    box-shadow: .3px 0.5px 0.7px hsl(286deg 36% 56% / 0.36),
+    0.8px 1.6px 2px -0.8px hsl(286deg 36% 56% / 0.36),
+    2.1px 4.1px 5.2px -1.7px hsl(286deg 36% 56% / 0.36),
+    5px 10px 12.6px -2.5px hsl(286deg 36% 56% / 0.36);
     
     img {
         border: 1px solid gray;

@@ -5,6 +5,11 @@
     padding-right: 10px;
     padding-top: 20px;
     padding-bottom: 20px;
+
+    @include mq.set-breakpoint('medium') {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
 
 .section-contact > div {
