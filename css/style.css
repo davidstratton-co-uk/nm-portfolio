@@ -10800,20 +10800,18 @@ body {
 @media only screen and (min-width: 768px) {
   body {
     grid-template-columns: 200px 1fr;
-    grid-template-areas: ". site-content";
+    grid-template-areas: "site-sidebar site-content";
   }
 }
 
 .site-sidebar {
   grid-column: site-sidebar;
   width: 100dvw;
-  min-width: 100%;
 }
 @media only screen and (min-width: 768px) {
   .site-sidebar {
     width: 200px;
     height: 100dvh;
-    min-height: 100%;
     position: fixed;
   }
 }
@@ -10829,11 +10827,37 @@ body {
   min-height: 50px;
   padding-left: 10px;
   padding-right: 10px;
+  color: black;
+  background-color: tomato;
 }
 @media only screen and (min-width: 768px) {
   .site-sidebar {
     grid-template-columns: 1fr;
+    grid-template-rows: max-content max-content 1fr;
+    min-height: 100%;
+    align-items: normal;
+    justify-items: center;
   }
+}
+
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 5rem;
+  }
+}
+
+.site-sidebar a {
+  color: black;
+  text-decoration: none;
+}
+.site-sidebar a:hover {
+  text-decoration: underline;
+}
+
+.site-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .site-menu {
@@ -10932,6 +10956,11 @@ body {
   padding-top: 1rem;
   padding-bottom: 0.5rem;
 }
+@media only screen and (min-width: 576px) {
+  .project-list > article h3 {
+    font-size: 2rem;
+  }
+}
 .project-list > article a {
   text-decoration: none;
   color: black;
@@ -10942,6 +10971,11 @@ body {
 }
 .project-list > article a:hover {
   text-decoration: underline;
+}
+@media only screen and (min-width: 576px) {
+  .project-list > article a {
+    font-size: 1.2rem;
+  }
 }
 
 .section-contact {
@@ -10962,7 +10996,12 @@ body {
   padding: 1rem 0;
 }
 .section-contact > div h4 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+}
+@media only screen and (min-width: 576px) {
+  .section-contact > div h4 {
+    font-size: 1.5rem;
+  }
 }
 
 .section-contact > form {

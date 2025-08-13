@@ -28,6 +28,10 @@
         font-size: 1.5rem;
         padding-top: 1rem;
         padding-bottom: 0.5rem;
+
+        @include mq.set-breakpoint('small') {
+            font-size: 2rem;
+        }
     }
 
     a {
@@ -39,6 +43,10 @@
 
         &:hover {
             text-decoration: underline;
+        }
+
+        @include mq.set-breakpoint('small') {
+            font-size: 1.2rem;
         }
     }
 }
