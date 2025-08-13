@@ -6,6 +6,9 @@
     align-items: center;
     min-height: 50px;
 
+    padding-left: 10px;
+    padding-right: 10px;
+
     @include mq.set-breakpoint('medium') {
         grid-template-columns: 1fr;
     }

@@ -10804,17 +10804,6 @@ body {
   }
 }
 
-.site-sidebar,
-.site-content {
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
-.site-header {
-  margin-left: -5px;
-  margin-right: -5px;
-}
-
 .site-sidebar {
   grid-column: site-sidebar;
   width: 100dvw;
@@ -10838,6 +10827,8 @@ body {
   grid-template-columns: max-content 1fr;
   align-items: center;
   min-height: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 @media only screen and (min-width: 768px) {
   .site-sidebar {
@@ -10910,4 +10901,74 @@ body {
   display: grid;
   grid-template-rows: 1fr 1fr;
   justify-items: center;
+  padding-bottom: 10px;
+}
+
+.section-projects {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 10px;
+}
+
+.project-list > article {
+  background: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+}
+.project-list > article img {
+  border: 1px solid gray;
+  width: 100%;
+}
+.project-list > article h3 {
+  font-size: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+.project-list > article a {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  -moz-column-gap: 3px;
+       column-gap: 3px;
+  align-items: center;
+}
+.project-list > article a:hover {
+  text-decoration: underline;
+}
+
+.section-contact {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: tomato;
+}
+
+.section-contact > div {
+  padding-bottom: 10px;
+}
+.section-contact > div h3 {
+  font-size: 2rem;
+}
+.section-contact > div p {
+  font-size: 1rem;
+  padding: 1rem 0;
+}
+.section-contact > div h4 {
+  font-size: 1.5rem;
+}
+
+.section-contact > form {
+  display: grid;
+}
+.section-contact > form input {
+  background-color: grey;
 }/*# sourceMappingURL=style.css.map */
