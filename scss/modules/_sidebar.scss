@@ -9,8 +9,6 @@
     padding-right: 10px;
     color: black;
 
-    background-color: tomato;
-
     @include mq.set-breakpoint('medium') {
         grid-template-columns: 1fr;
         grid-template-rows: max-content max-content 1fr;
