@@ -10949,7 +10949,6 @@ body {
   padding-right: 10px;
   padding-top: 20px;
   padding-bottom: 20px;
-  background-color: tomato;
 }
 
 .section-contact > div {
@@ -10968,7 +10967,41 @@ body {
 
 .section-contact > form {
   display: grid;
+  gap: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 .section-contact > form input {
-  background-color: grey;
+  background-color: lightgrey;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 10px;
+  color: black;
+}
+.section-contact > form button {
+  margin: 20px auto 0;
+  padding: 10px 20px;
+  border: 2px solid bloack;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.site-content > footer {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.site-content > footer > a {
+  color: black;
+  text-decoration: none;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  padding-bottom: 10px;
 }/*# sourceMappingURL=style.css.map */

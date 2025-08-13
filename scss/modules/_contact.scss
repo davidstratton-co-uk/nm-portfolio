@@ -5,7 +5,6 @@
     padding-right: 10px;
     padding-top: 20px;
     padding-bottom: 20px;
-    background-color: tomato;
 }
 
 .section-contact > div {
@@ -26,8 +25,24 @@
 
 .section-contact > form {
     display: grid;
+    gap: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
 
     input {
-        background-color: grey;
+        background-color: lightgrey;
+        border: 1px solid grey;
+        border-radius: 5px;
+        padding: 10px;
+        color: black;
+    }
+
+    button {
+        margin: 20px auto 0;
+        padding: 10px 20px;
+        border: 2px solid bloack;
+        border-radius: 5px;
+        text-transform: uppercase;
+        font-weight: 600;
     }
 }
