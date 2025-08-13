@@ -1,0 +1,14 @@
+@use '../vars/config';
+
+html {
+    font-size: config.$font-size
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    padding: 0;
+    margin: 0;
+}

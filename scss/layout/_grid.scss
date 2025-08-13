@@ -1,0 +1,44 @@
+@use '../helpers/media-query' as mq;
+
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "site-sidebar"
+        "site-content";
+
+    @include mq.set-breakpoint('medium') {
+        grid-template-columns: 200px 1fr;
+        grid-template-areas: 
+            ". site-content";
+    }
+}
+
+.site-sidebar,
+.site-content {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.site-header {
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.site-sidebar {
+    grid-column: site-sidebar;
+    width: 100dvw;
+    min-width: 100%;
+
+    @include mq.set-breakpoint('medium') {
+        width: 200px;
+        height: 100dvh;
+        min-height: 100%;
+        position: fixed;
+    }
+}
+
+.site-content {
+    grid-area: site-content
+}
+

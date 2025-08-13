@@ -1,0 +1,49 @@
+@use '../helpers/media-query' as mq;
+
+.site-sidebar {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    align-items: center;
+    min-height: 50px;
+
+    @include mq.set-breakpoint('medium') {
+        grid-template-columns: 1fr;
+    }
+}
+
+.site-menu {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(2, min-content);
+    grid-template-rows: repeat(3, min-content);
+    column-gap: 10px;
+
+    p {
+        grid-column: 1;
+        grid-row: 1 / -1;
+    }
+
+    .menu-top,
+    .menu-inner,
+    .menu-bottom {
+        background-color: black;
+        width: 30px;
+        height: 5px;
+        margin: 2px;
+    }
+
+
+    @include mq.set-breakpoint('medium') {
+        display: none;
+    }
+}
+
+.site-nav,
+.site-social {
+    display: none;
+
+    @include mq.set-breakpoint('medium') {
+        display: block;
+    }
+}

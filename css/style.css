@@ -10777,4 +10777,137 @@ summary {
 
 .fa-umbraco {
   --fa: "\f8e8";
+}
+
+html {
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "site-sidebar" "site-content";
+}
+@media only screen and (min-width: 768px) {
+  body {
+    grid-template-columns: 200px 1fr;
+    grid-template-areas: ". site-content";
+  }
+}
+
+.site-sidebar,
+.site-content {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.site-header {
+  margin-left: -5px;
+  margin-right: -5px;
+}
+
+.site-sidebar {
+  grid-column: site-sidebar;
+  width: 100dvw;
+  min-width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .site-sidebar {
+    width: 200px;
+    height: 100dvh;
+    min-height: 100%;
+    position: fixed;
+  }
+}
+
+.site-content {
+  grid-area: site-content;
+}
+
+.site-sidebar {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  min-height: 50px;
+}
+@media only screen and (min-width: 768px) {
+  .site-sidebar {
+    grid-template-columns: 1fr;
+  }
+}
+
+.site-menu {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(2, min-content);
+  grid-template-rows: repeat(3, min-content);
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+.site-menu p {
+  grid-column: 1;
+  grid-row: 1/-1;
+}
+.site-menu .menu-top,
+.site-menu .menu-inner,
+.site-menu .menu-bottom {
+  background-color: black;
+  width: 30px;
+  height: 5px;
+  margin: 2px;
+}
+@media only screen and (min-width: 768px) {
+  .site-menu {
+    display: none;
+  }
+}
+
+.site-nav,
+.site-social {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  .site-nav,
+  .site-social {
+    display: block;
+  }
+}
+
+.site-header {
+  background-color: black;
+  height: calc(100dvh - 50px);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr max-content;
+  justify-items: center;
+}
+@media only screen and (min-width: 768px) {
+  .site-header {
+    height: 100dvh;
+  }
+}
+
+.site-header h2 {
+  color: #fff;
+  align-self: self-end;
+}
+.site-header p {
+  color: #fff;
+}
+.site-header a {
+  color: #fff;
+  text-decoration: none;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
 }/*# sourceMappingURL=style.css.map */
