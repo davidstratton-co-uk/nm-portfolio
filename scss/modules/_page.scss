@@ -24,7 +24,7 @@
     padding-top: 30px;
     padding-bottom: 30px;
 
-        @include mq.set-breakpoint('small') {
+    @include mq.set-breakpoint('small') {
         padding-left: 40px;
         padding-right: 40px;
         padding-top: 40px;
@@ -70,12 +70,6 @@
 
     h3:first-of-type {
         padding-top: 0rem;
-    }
-
-    h3:not(:first-of-type) {
-        &::before {
-
-        }
     }
 
     h4 {

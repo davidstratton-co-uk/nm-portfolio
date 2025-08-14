@@ -10855,22 +10855,20 @@ body {
     padding: 2rem;
   }
 }
+.site-sidebar header a {
+  color: black;
+  text-decoration: none;
+  padding: 0 2rem;
+  border-radius: 5px;
+}
+.site-sidebar header a:hover {
+  background-color: #bfaffd;
+}
 
 @media only screen and (min-width: 768px) {
   h1 {
     font-size: 5rem;
   }
-}
-
-.site-sidebar a {
-  color: black;
-  text-decoration: none;
-  border-radius: 5px;
-  padding: 0.5rem;
-}
-.site-sidebar a:hover {
-  text-decoration: underline;
-  background-color: #bfaffd;
 }
 
 .site-sidebar ul {
@@ -10923,13 +10921,24 @@ body {
   border-bottom: 1px solid lightgrey;
 }
 
-.site-nav a {
+.site-nav a,
+.site-social a {
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 0.5rem;
   display: flex;
   -moz-column-gap: 0.5rem;
        column-gap: 0.5rem;
 }
-.site-nav a:hover i {
+.site-nav a:hover i,
+.site-social a:hover i {
   text-decoration: none;
+}
+.site-nav a:hover,
+.site-social a:hover {
+  text-decoration: underline;
+  background-color: #bfaffd;
 }
 
 .site-nav > ul {
