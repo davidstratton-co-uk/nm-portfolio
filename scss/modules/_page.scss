@@ -95,4 +95,12 @@
             font-size: 1.2rem;
         }
     }
+
+    p {
+        margin: 1rem 1rem 1rem 0;
+    }
+
+    p:first-of-type {
+        margin-top: 0;
+    }
 }

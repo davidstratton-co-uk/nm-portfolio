@@ -10858,11 +10858,15 @@ body {
 .site-sidebar header a {
   color: black;
   text-decoration: none;
-  padding: 0 2rem;
   border-radius: 5px;
 }
 .site-sidebar header a:hover {
   background-color: #bfaffd;
+}
+@media only screen and (min-width: 768px) {
+  .site-sidebar header a {
+    padding: 0 2rem;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -11098,6 +11102,12 @@ body {
   .page-section ul {
     font-size: 1.2rem;
   }
+}
+.page-section p {
+  margin: 1rem 1rem 1rem 0;
+}
+.page-section p:first-of-type {
+  margin-top: 0;
 }
 
 .section-projects {
@@ -11358,4 +11368,21 @@ body {
   grid-template-rows: 1fr 1fr;
   justify-items: center;
   padding-bottom: 10px;
+}
+
+.page-scion {
+  display: grid;
+}
+.page-scion div:last-of-type {
+  margin-top: 2rem;
+}
+@media only screen and (min-width: 1200px) {
+  .page-scion {
+    grid-template-columns: 1fr 1fr;
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
+  }
+  .page-scion div:last-of-type {
+    grid-column: span 2;
+  }
 }/*# sourceMappingURL=style.css.map */

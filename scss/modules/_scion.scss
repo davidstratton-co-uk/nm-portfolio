@@ -1,0 +1,19 @@
+@use '../helpers/media-query' as mq;
+
+.page-scion {
+    display: grid;
+
+    div:last-of-type {
+        margin-top: 2rem;
+    }
+
+    @include mq.set-breakpoint('x-large') {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+        div:last-of-type {
+            
+            grid-column: span 2;
+        }
+    }
+
+}
