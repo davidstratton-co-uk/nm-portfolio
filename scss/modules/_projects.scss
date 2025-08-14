@@ -16,16 +16,22 @@
     @include mq.set-breakpoint('medium') {
         padding-left: 30px;
         padding-right: 30px;
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
 
     @include mq.set-breakpoint('large') {
         padding-left: 30px;
         padding-right: 30px;
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
 
     @include mq.set-breakpoint('x-large') {
-        padding-left: 30px;
-        padding-right: 30px;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 40px;
+        padding-bottom: 40px;
     }
 }
 
@@ -49,11 +55,12 @@
 
     @include mq.set-breakpoint('x-large') {
         grid-template-columns: 1fr 1fr 1fr;
-        gap: 30px;
+        gap: 40px;
     }
 }
 
 .project-list > article {
+    position: relative;
     background: white;
     border: 1px solid black;
     border-radius: 5px;
@@ -77,9 +84,21 @@
         @include mq.set-breakpoint('small') {
             font-size: 2rem;
         }
+
+        @include mq.set-breakpoint('large') {
+            font-size: 1.5rem;
+        }
     }
 
     a {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    p {
         text-decoration: none;
         color: black;
         display: flex;

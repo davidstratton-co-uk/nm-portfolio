@@ -11002,18 +11002,24 @@ body {
   .section-projects {
     padding-left: 30px;
     padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 }
 @media only screen and (min-width: 992px) {
   .section-projects {
     padding-left: 30px;
     padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 }
 @media only screen and (min-width: 1200px) {
   .section-projects {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 }
 
@@ -11041,11 +11047,12 @@ body {
 @media only screen and (min-width: 1200px) {
   .project-list {
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 30px;
+    gap: 40px;
   }
 }
 
 .project-list > article {
+  position: relative;
   background: white;
   border: 1px solid black;
   border-radius: 5px;
@@ -11066,7 +11073,19 @@ body {
     font-size: 2rem;
   }
 }
+@media only screen and (min-width: 992px) {
+  .project-list > article h3 {
+    font-size: 1.5rem;
+  }
+}
 .project-list > article a {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.project-list > article p {
   text-decoration: none;
   color: black;
   display: flex;
@@ -11074,11 +11093,11 @@ body {
        column-gap: 3px;
   align-items: center;
 }
-.project-list > article a:hover {
+.project-list > article p:hover {
   text-decoration: underline;
 }
 @media only screen and (min-width: 576px) {
-  .project-list > article a {
+  .project-list > article p {
     font-size: 1.2rem;
   }
 }
@@ -11103,6 +11122,8 @@ body {
   .section-contact {
     padding-left: 30px;
     padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 }
 @media only screen and (min-width: 992px) {
@@ -11112,12 +11133,16 @@ body {
          column-gap: 1rem;
     padding-left: 30px;
     padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 }
 @media only screen and (min-width: 1200px) {
   .section-contact {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 }
 
