@@ -1,0 +1,104 @@
+@use '../helpers/media-query' as mq;
+
+.page-header {
+    background-color: #310e68;
+    background-image: linear-gradient(316deg, #310e68 0%, #5f0f40 74%);
+    height: calc(150px - 50px);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+
+    h2 {
+        color: #fff;
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+}
+
+.page-section {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+        @include mq.set-breakpoint('small') {
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    @include mq.set-breakpoint('medium') {
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    @include mq.set-breakpoint('large') {
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    @include mq.set-breakpoint('x-large') {
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+.page-section {
+    h3 {
+    font-size: 1.5rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+
+        @include mq.set-breakpoint('small') {
+            font-size: 2rem;
+        }
+
+        @include mq.set-breakpoint('large') {
+            font-size: 1.5rem;
+        }
+    }
+
+    h3:first-of-type {
+        padding-top: 0rem;
+    }
+
+    h3:not(:first-of-type) {
+        &::before {
+
+        }
+    }
+
+    h4 {
+        font-size: 1.3rem;
+        padding-top: 1rem;
+        padding-bottom: 0.5rem;
+
+        @include mq.set-breakpoint('small') {
+            font-size: 1.5rem;
+        }
+
+        @include mq.set-breakpoint('large') {
+            font-size: 1.3rem;
+        }
+    }
+    
+    p,
+    ul {
+        color: black;
+        margin: 0;
+
+        @include mq.set-breakpoint('small') {
+            font-size: 1.2rem;
+        }
+    }
+}

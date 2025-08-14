@@ -10984,6 +10984,106 @@ body {
   font-size: 1rem;
 }
 
+.page-header {
+  background-color: #310e68;
+  background-image: linear-gradient(316deg, #310e68 0%, #5f0f40 74%);
+  height: 100px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  align-items: center;
+}
+.page-header h2 {
+  color: #fff;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.page-section {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+@media only screen and (min-width: 576px) {
+  .page-section {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .page-section {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .page-section {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .page-section {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+.page-section h3 {
+  font-size: 1.5rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+@media only screen and (min-width: 576px) {
+  .page-section h3 {
+    font-size: 2rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .page-section h3 {
+    font-size: 1.5rem;
+  }
+}
+.page-section h3:first-of-type {
+  padding-top: 0rem;
+}
+.page-section h4 {
+  font-size: 1.3rem;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+@media only screen and (min-width: 576px) {
+  .page-section h4 {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .page-section h4 {
+    font-size: 1.3rem;
+  }
+}
+.page-section p,
+.page-section ul {
+  color: black;
+  margin: 0;
+}
+@media only screen and (min-width: 576px) {
+  .page-section p,
+  .page-section ul {
+    font-size: 1.2rem;
+  }
+}
+
 .section-projects {
   padding-left: 30px;
   padding-right: 30px;
