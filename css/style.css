@@ -10822,11 +10822,10 @@ body {
 
 .site-sidebar {
   display: grid;
-  grid-template-columns: max-content 1fr;
+  grid-template-columns: 55px 1fr;
   align-items: center;
-  min-height: 50px;
-  padding-left: 10px;
-  padding-right: 10px;
+  justify-items: center;
+  min-height: 55px;
   color: black;
 }
 @media only screen and (min-width: 768px) {
@@ -10841,7 +10840,16 @@ body {
 }
 
 .site-sidebar header {
-  padding: 2rem;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 0.5rem;
+  border-right: 1px solid lightgrey;
+}
+@media only screen and (min-width: 768px) {
+  .site-sidebar header {
+    padding: 2rem;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -10934,7 +10942,8 @@ body {
 }
 
 .site-header {
-  background-color: black;
+  background-color: #310e68;
+  background-image: linear-gradient(316deg, #310e68 0%, #5f0f40 74%);
   height: calc(100dvh - 50px);
   display: grid;
   grid-template-columns: 1fr;
@@ -10950,9 +10959,18 @@ body {
 .site-header h2 {
   color: #fff;
   align-self: self-end;
+  font-size: 2.5rem;
+  text-align: center;
+}
+@media only screen and (min-width: 576px) {
+  .site-header br {
+    display: none;
+  }
 }
 .site-header p {
   color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
 }
 .site-header a {
   color: #fff;
@@ -10962,24 +10980,69 @@ body {
   justify-items: center;
   padding-bottom: 10px;
 }
+.site-header a p {
+  font-size: 1rem;
+}
 
 .section-projects {
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+@media only screen and (min-width: 576px) {
+  .section-projects {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }
 @media only screen and (min-width: 768px) {
   .section-projects {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .section-projects {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .section-projects {
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 
 .project-list {
   display: grid;
   grid-template-columns: 1fr;
-  row-gap: 10px;
+  row-gap: 30px;
+}
+@media only screen and (min-width: 576px) {
+  .project-list {
+    row-gap: 40px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .project-list {
+    row-gap: 30px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .project-list {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .project-list {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+  }
 }
 
 .project-list > article {
@@ -11021,15 +11084,40 @@ body {
 }
 
 .section-contact {
-  padding-left: 10px;
-  padding-right: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-left: 20px;
+  padding-right: 20px;
   padding-top: 20px;
   padding-bottom: 20px;
 }
+@media only screen and (min-width: 576px) {
+  .section-contact {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
 @media only screen and (min-width: 768px) {
   .section-contact {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .section-contact {
+    grid-template-columns: 1fr 2fr;
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .section-contact {
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 
@@ -11055,8 +11143,11 @@ body {
 .section-contact > form {
   display: grid;
   gap: 10px;
-  margin-left: 20px;
-  margin-right: 20px;
+}
+@media only screen and (min-width: 1200px) {
+  .section-contact > form {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 .section-contact > form input {
   background-color: lightgrey;
@@ -11065,15 +11156,28 @@ body {
   padding: 10px;
   color: black;
 }
+@media only screen and (min-width: 1200px) {
+  .section-contact > form input {
+    grid-column: span 2;
+  }
+  .section-contact > form input[id=firstname], .section-contact > form input[id=lastname] {
+    grid-column: span 1;
+  }
+}
 .section-contact > form button {
-  margin: 20px auto 0;
+  margin: 20px 0;
   padding: 10px 20px;
-  border: 2px solid bloack;
+  border: 2px solid black;
   border-radius: 5px;
   text-transform: uppercase;
   font-weight: 600;
+  justify-self: center;
 }
-
+@media only screen and (min-width: 992px) {
+  .section-contact > form button {
+    justify-self: left;
+  }
+}
 .site-content > footer {
   padding-left: 10px;
   padding-right: 10px;

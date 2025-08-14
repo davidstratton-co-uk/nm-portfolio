@@ -1,21 +1,56 @@
 @use '../helpers/media-query' as mq;
 
 .section-projects {
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    @include mq.set-breakpoint('small') {
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
 
     @include mq.set-breakpoint('medium') {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    @include mq.set-breakpoint('large') {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    @include mq.set-breakpoint('x-large') {
+        padding-left: 30px;
+        padding-right: 30px;
     }
 }
 
 .project-list {
     display: grid;
     grid-template-columns: 1fr;
-    row-gap: 10px;
+    row-gap: 30px;
+
+    @include mq.set-breakpoint('small') {
+        row-gap: 40px;
+    }
+
+    @include mq.set-breakpoint('medium') {
+        row-gap: 30px;
+    }
+
+    @include mq.set-breakpoint('large') {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    @include mq.set-breakpoint('x-large') {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+    }
 }
 
 .project-list > article {
