@@ -81,7 +81,8 @@
         grid-template-columns: 1fr 1fr;
     }
 
-    input {
+    input,
+    textarea {
         background-color: lightgrey;
         border: 1px solid grey;
         border-radius: 5px;
@@ -94,8 +95,13 @@
             &[id="firstname"],
             &[id="lastname"] {
                 grid-column: span 1;
+                grid-row: 2;
             }
         }
+    }
+
+    textarea {
+        height: 10rem;
     }
 
     button {
