@@ -1,0 +1,10 @@
+@use '../helpers/media-query' as mq;
+
+.page-about {
+    display: grid;
+
+    div:last-of-type {
+        margin-top: 2rem;
+    }
+
+}

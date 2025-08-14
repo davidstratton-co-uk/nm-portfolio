@@ -11370,6 +11370,13 @@ body {
   padding-bottom: 10px;
 }
 
+.page-about {
+  display: grid;
+}
+.page-about div:last-of-type {
+  margin-top: 2rem;
+}
+
 .page-scion {
   display: grid;
 }
