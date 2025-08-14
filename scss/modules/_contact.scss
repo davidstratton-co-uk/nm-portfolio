@@ -94,6 +94,12 @@
         text-transform: uppercase;
         font-weight: 600;
         justify-self: center;
+        background-color: #f3f0ff;
+
+        &:hover {
+            cursor: pointer;
+            background-color: #bfaffd;
+        }
 
         @include mq.set-breakpoint('large') {
             justify-self: left;

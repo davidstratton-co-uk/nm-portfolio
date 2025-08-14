@@ -10783,6 +10783,10 @@ html {
   font-size: 16px;
 }
 
+body {
+  background-color: #FAF9F6;
+}
+
 h1,
 h2,
 h3,
@@ -10864,6 +10868,7 @@ body {
 }
 .site-sidebar a:hover {
   text-decoration: underline;
+  background-color: #f3f0ff;
 }
 
 .site-sidebar ul {
@@ -11303,6 +11308,11 @@ body {
   text-transform: uppercase;
   font-weight: 600;
   justify-self: center;
+  background-color: #f3f0ff;
+}
+.section-contact > form button:hover {
+  cursor: pointer;
+  background-color: #bfaffd;
 }
 @media only screen and (min-width: 992px) {
   .section-contact > form button {
