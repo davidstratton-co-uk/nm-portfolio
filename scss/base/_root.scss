@@ -1,7 +1,11 @@
 @use '../vars/config';
 
 html {
-    font-size: config.$font-size
+    font-size: config.$font-size;
+    font-family: "Mona Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    letter-spacing: 0.03rem;;
 }
 
 body {

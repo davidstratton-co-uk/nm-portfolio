@@ -6,7 +6,7 @@
 // customize variables
 @use './fontawesome/variables' with (
   // customizing $font-path
-  $font-path: '../assets/fonts',
+  $font-path: '../fonts',
 );
 
 // load Font Awesome core

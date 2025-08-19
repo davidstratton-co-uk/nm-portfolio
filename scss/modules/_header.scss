@@ -21,19 +21,34 @@
         align-self: self-end;
         font-size: 2.5rem;
         text-align: center;
+
+
+        @include mq.set-breakpoint('medium') {
+            font-size: 3rem;
+        }
+
+        @include mq.set-breakpoint('large') {
+            font-size: 5rem;
+        }
     }
 
-    @include mq.set-breakpoint('small') {
-        br {
+
+    br {
+        display: unset;
+
+        @include mq.set-breakpoint('small') {
+            display: none;
+        }
+
+        @include mq.set-breakpoint('medium') {
+            display: unset;
+        }
+
+        @include mq.set-breakpoint('xx-large') {
             display: none;
         }
     }
-    p {
-        color: #fff;
-        font-size: 1.5rem;
-        text-align: center;
-    }
-
+    
     a {
         color: #fff;
         text-decoration: none;
@@ -45,5 +60,56 @@
         p {
             font-size: 1rem;
         }
+
+        @include mq.set-breakpoint('large') {
+            font-size: 2rem;
+            padding-bottom: 2rem;
+            p {
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+.site-subheader {
+
+    display: flex;
+    flex-direction: row;
+    color: #fff;
+    font-size: 1.5rem;
+
+    @include mq.set-breakpoint('medium') {
+        font-size: 2rem;
+    }
+
+    @include mq.set-breakpoint('large') {
+        font-size: 3rem;
+    }
+    
+    P {
+        white-space: pre-wrap;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        padding: 0;
+        list-style: none;
+
+    }
+
+    li {
+        display: block;
+        height: 0;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.5s linear;
+        position: relative;
+        top: 0;
+    }
+
+    li.show {
+        height: auto;
+        opacity: 1;
+        transition: visibility 0s, opacity 0.5s linear;
     }
 }
