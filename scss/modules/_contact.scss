@@ -183,11 +183,6 @@
         }
     }
 
-    // button,
-    // %form-msg {
-    //     column-span: 2;
-    // }
-
     %form-msg {
         text-align: center;
         padding: 5px;
@@ -195,6 +190,10 @@
         border: 1px solid grey;
         height: fit-content;
         align-self: center;
+    
+        strong {
+            text-transform: uppercase;
+        }
         
         @include mq.set-breakpoint('large') {
             strong {
@@ -219,13 +218,21 @@
         }
     }
     
-    .form-msg--success {
-        @extend %form-msg;
-        background-color: #6fc46f;
-    }
 
-    .form-msg--fail {
-        @extend %form-msg;
-        background-color: #c46f6f;
+    .form-msg {
+        &--success {
+            @extend %form-msg;
+            background-color: #6fc46f;
+        }
+
+        &--error {
+            @extend %form-msg;
+            background-color: #c46f6f;
+        }
+
+        &--warn {
+            @extend %form-msg;
+            background-color: #c4a66f;
+        }
     }
 }

@@ -11510,7 +11510,7 @@ body {
     justify-self: left;
   }
 }
-.contact-form .form-msg--fail, .contact-form .form-msg--success {
+.contact-form .form-msg--warn, .contact-form .form-msg--error, .contact-form .form-msg--success {
   text-align: center;
   padding: 5px;
   border-radius: 3px;
@@ -11519,32 +11519,38 @@ body {
   height: fit-content;
   align-self: center;
 }
+.contact-form .form-msg--warn strong, .contact-form .form-msg--error strong, .contact-form .form-msg--success strong {
+  text-transform: uppercase;
+}
 @media only screen and (min-width: 992px) {
-  .contact-form .form-msg--fail strong, .contact-form .form-msg--success strong {
+  .contact-form .form-msg--warn strong, .contact-form .form-msg--error strong, .contact-form .form-msg--success strong {
     display: block;
   }
-  .contact-form .form-msg--fail span, .contact-form .form-msg--success span {
+  .contact-form .form-msg--warn span, .contact-form .form-msg--error span, .contact-form .form-msg--success span {
     display: none;
   }
 }
 @media only screen and (min-width: 1500px) {
-  .contact-form .form-msg--fail strong, .contact-form .form-msg--success strong {
+  .contact-form .form-msg--warn strong, .contact-form .form-msg--error strong, .contact-form .form-msg--success strong {
     display: inline;
   }
-  .contact-form .form-msg--fail span, .contact-form .form-msg--success span {
+  .contact-form .form-msg--warn span, .contact-form .form-msg--error span, .contact-form .form-msg--success span {
     display: inline;
   }
 }
 @media only screen and (min-width: 1200px) {
-  .contact-form .form-msg--fail, .contact-form .form-msg--success {
+  .contact-form .form-msg--warn, .contact-form .form-msg--error, .contact-form .form-msg--success {
     grid-column: span 3;
   }
 }
 .contact-form .form-msg--success {
   background-color: #6fc46f;
 }
-.contact-form .form-msg--fail {
+.contact-form .form-msg--error {
   background-color: #c46f6f;
+}
+.contact-form .form-msg--warn {
+  background-color: #c4a66f;
 }
 
 .site-content > footer {
