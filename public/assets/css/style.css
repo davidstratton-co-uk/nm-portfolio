@@ -10906,7 +10906,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-.site-menu p {
+.site-menu span:first-of-type {
   grid-column: 1;
   grid-row: 1/-1;
 }
