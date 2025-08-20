@@ -20,7 +20,7 @@ const form = document.querySelector('.contact-form');
 const formInputs = document.querySelectorAll('.contact-form input, .contact-form textarea');
 const formEmail = document.querySelector('.contact-form input[id="email"]');
 
-const emailRegExp2 = /^[\w.!#$%&'*+/=?^`{|}~-]+@[a-z\d-]+(?:\.[a-z\d-]+)*$/i;
+const emailRegExp = /^[\w.!#$%&'*+/=?^`{|}~-]+@[a-z\d-]+(?:\.[a-z\d-]+)*$/i;
 
 const addError = (input, errormsg) => {
     if (!input.nextElementSibling) {
@@ -41,13 +41,27 @@ const removeError = (input) => {
     }
 }
 
+const buildFormMsg = () => {
+    let div = createElement("div");
+    div.classList.add(`form-msg--${type}`);
+    let strong = createElement("strong");
+    strong.value = `${type}`
+    
+    let span = createElement("span");
+}
+
+const formMsg = (type, msg) => {
+
+
+}
+
 const isEmailValid = () => {
     if (!formEmail.value.includes("@")) {
         addError(formEmail, "E-mail requires an @");
         return false;
     }
     
-    if (!emailRegExp2.test(formEmail.value)) {
+    if (!emailRegExp.test(formEmail.value)) {
         console.log("regex checked");
         addError(formEmail, "Invalid E-mail");
         return false;
@@ -57,40 +71,42 @@ const isEmailValid = () => {
     return true;
 }
 
-form.addEventListener("focusout", (e) => {
+const isInputValid = (input) => {
+    if (!input.value) {
+        addError(input, `This field can not be empty.`);
+        return false;
+    } else {
+        removeError(input);
+        return true;
+    }
+}
 
+
+const inputHandler = (e) => {
     if (e.target.type === "text" || e.target.type === "textarea")  {
         if (e.target.id == "email") {
             isEmailValid();
         } else {
-            if (!e.target.value) {
-                addError(e.target, `This field can not be empty.`);
-            } else {
-                removeError(e.target);
-            }
+            isInputValid(e.target);
         }
     }
-});
+}
 
-form.addEventListener("submit", (e) => {
+const formHandler = (e) => {
     e.preventDefault();
     let formReady = true;
 
     for (let i = 0; i < formInputs.length; i++) {
-        if (!formInputs[i].value) {
-
-            addError(formInputs[i], `This field can not be empty.`);
-
+        if (!isInputValid(formInputs[i])) {
             formReady = false;
         }
     }
 
-    if (!isEmailValid) {
+    if (!isEmailValid()) {
         formReady = false;
     }
 
     if (!formReady) {
-        e.preventDefault();
         // TODO: Display Failure
     } else {
         for (let i = 0; i < formInputs.length; i++) {
@@ -99,7 +115,10 @@ form.addEventListener("submit", (e) => {
         }
         // TODO: Display Success
     }
-});
+}
+
+form.addEventListener("focusout", inputHandler);
+form.addEventListener("submit", formHandler);
 
 
 /** 

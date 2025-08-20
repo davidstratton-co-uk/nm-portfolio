@@ -11420,11 +11420,10 @@ body {
 .contact-form {
   display: grid;
   gap: 10px;
-  overflow: auto;
 }
 @media only screen and (min-width: 1200px) {
   .contact-form {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 .contact-form input,
@@ -11467,20 +11466,20 @@ body {
   .contact-form label,
   .contact-form input,
   .contact-form textarea {
-    grid-column: span 2;
+    grid-column: span 4;
   }
 }
 @media only screen and (min-width: 1200px) {
   .contact-form label[for=firstname],
   .contact-form label[for=lastname] {
-    grid-column: span 1;
+    grid-column: span 2;
     grid-row: 1;
   }
 }
 @media only screen and (min-width: 1200px) {
   .contact-form input[id=firstname],
   .contact-form input[id=lastname] {
-    grid-column: span 1;
+    grid-column: span 2;
     grid-row: 2;
   }
 }
@@ -11494,7 +11493,6 @@ body {
   height: 10rem;
 }
 .contact-form button {
-  margin: 20px 0;
   padding: 10px 20px;
   border: 2px solid black;
   border-radius: 5px;
@@ -11512,6 +11510,43 @@ body {
     justify-self: left;
   }
 }
+.contact-form .form-msg--fail, .contact-form .form-msg--success {
+  text-align: center;
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid grey;
+  height: -moz-fit-content;
+  height: fit-content;
+  align-self: center;
+}
+@media only screen and (min-width: 992px) {
+  .contact-form .form-msg--fail strong, .contact-form .form-msg--success strong {
+    display: block;
+  }
+  .contact-form .form-msg--fail span, .contact-form .form-msg--success span {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1500px) {
+  .contact-form .form-msg--fail strong, .contact-form .form-msg--success strong {
+    display: inline;
+  }
+  .contact-form .form-msg--fail span, .contact-form .form-msg--success span {
+    display: inline;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .contact-form .form-msg--fail, .contact-form .form-msg--success {
+    grid-column: span 3;
+  }
+}
+.contact-form .form-msg--success {
+  background-color: #6fc46f;
+}
+.contact-form .form-msg--fail {
+  background-color: #c46f6f;
+}
+
 .site-content > footer {
   padding-left: 10px;
   padding-right: 10px;
