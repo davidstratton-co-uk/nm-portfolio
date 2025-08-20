@@ -32,3 +32,34 @@
         display: none;
     }
 }
+
+
+.site-menu {
+
+    .menu-inner,
+    .menu-top,
+    .menu-bottom {
+        transition: 0.5s linear;
+    }
+
+}
+
+.site-menu.active {
+
+    .menu-inner,
+    .menu-top,
+    .menu-bottom {
+        background-color: plum;
+    }
+
+    .menu-inner {
+        opacity: 0;
+    }
+    .menu-top {
+        transform: translate(0px, 10px) rotate(45deg);
+    }
+
+    .menu-bottom {
+        transform: translate(0px, -8px) rotate(-45deg);
+    }
+}
