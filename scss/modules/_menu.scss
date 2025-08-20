@@ -1,0 +1,34 @@
+@use '../helpers/media-query' as mq;
+
+.site-menu {
+    display: grid;
+    grid-template-columns: repeat(2, min-content);
+    grid-template-rows: repeat(3, min-content);
+    column-gap: 10px;
+    background-color: inherit;
+    border: 0;
+    width: 100%;
+    height: 100%;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+    span:first-of-type {
+        grid-column: 1;
+        grid-row: 1 / -1;
+    }
+
+    .menu-top,
+    .menu-inner,
+    .menu-bottom {
+        background-color: black;
+        width: 30px;
+        height: 5px;
+        margin: 2px;
+    }
+
+
+    @include mq.set-breakpoint('medium') {
+        display: none;
+    }
+}
