@@ -102,17 +102,27 @@
                 <h4><i class="fa-solid fa-envelope"></i><a href="mailto:david.stratton@outlook.com">david.stratton@outlook.com</a></h4>
                 <p>Alternatively I can be reached by phone or e-mail.</p>
             </div>
-            <form action="#" method="post">
-                <label for="firstname">First Name (required)</label>
-                <input type="text" id="firstname" name="firstname" autocomplete="given-name" required>
-                <label for="lastname">Last Name (required)</label>
-                <input type="text" id="lastname" name="lastname" autocomplete="family-name" required>
-                <label for="email">E-mail (required)</label>
-                <input type="email" id="email" name="email" autocomplete="email" required>
-                <label for="subject">Subject</label>
-                <input type="text" id="subject" name="subject">
-                <label for="message">Message</label>
-                <textarea id="message"></textarea>
+            <form class="contact-form" action="#" method="post">
+                <label for="firstname">
+                    <span>First Name: (required)</span>
+                    <input type="text" id="firstname" name="firstname" autocomplete="given-name">
+                </label>
+                <label for="lastname">
+                    <span>Last Name: (required)</span>
+                    <input type="text" id="lastname" name="lastname" autocomplete="family-name">
+                </label>
+                <label for="email">
+                    <span>E-mail: (required)</span>
+                    <input type="text" id="email" name="email" autocomplete="email">
+                </label>
+                <label for="subject">
+                    <span>Subject: (required)</span>
+                    <input type="text" id="subject" name="subject">
+                </label>
+                <label for="message">
+                    <span>Message: (required)</span>
+                    <textarea id="message"></textarea>
+                </label>
                 <button type="submit">Submit</button>
             </form>
         </section>

@@ -73,10 +73,11 @@
     }
 }
 
-.section-contact > form {
+.contact-form {
     display: grid;
     gap: 10px;
-
+    overflow:auto;
+    
     @include mq.set-breakpoint('x-large') {
         grid-template-columns: 1fr 1fr;
     }
@@ -88,16 +89,72 @@
         border-radius: 5px;
         padding: 10px;
         color: black;
+    }
 
-        @include mq.set-breakpoint('x-large') {
-            grid-column: span 2;
+    label {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
 
-            &[id="firstname"],
-            &[id="lastname"] {
-                grid-column: span 1;
-                grid-row: 2;
+        .error-msg {
+            display: block;
+            position: relative;
+            border: 1px solid #FF4532;
+            border-top: 5px solid #FF4532;
+            background-color: #ffc3bc;
+            padding: 2px 5px;
+            font-size: .8rem;
+            width: 90%;
+            margin: 0 auto -25px;
+
+            &::before {
+                position: absolute;
+                content: "";
+                top: -15px;
+                left: 10%;
+                width: 0px;
+                height: 0px;
+                border-style: solid;
+                border-width: 0 10px 10px 10px;
+                border-color: transparent transparent #FF4532 transparent;
+                transform: rotate(0deg);
             }
         }
+    }
+
+    label,
+    input,
+    textarea {
+
+        @include mq.set-breakpoint('x-large') {
+            grid-column: span 2
+        }
+    }
+
+    label[for="firstname"],
+    label[for="lastname"] {
+
+         @include mq.set-breakpoint('x-large') {
+            grid-column: span 1;
+            grid-row: 1;
+        }
+     }
+
+    input[id="firstname"],
+    input[id="lastname"] {
+
+        @include mq.set-breakpoint('x-large') {
+            grid-column: span 1;
+            grid-row: 2;
+        }
+    }
+
+    input.error,
+    textarea.error {
+        border: 1px solid #FF4532;
+        border-left: 5px solid #FF4532;
+        position: relative;
+
     }
 
     textarea {

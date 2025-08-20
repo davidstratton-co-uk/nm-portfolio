@@ -11416,39 +11416,83 @@ body {
   text-decoration: underline;
 }
 
-.section-contact > form {
+.contact-form {
   display: grid;
   gap: 10px;
+  overflow: auto;
 }
 @media only screen and (min-width: 1200px) {
-  .section-contact > form {
+  .contact-form {
     grid-template-columns: 1fr 1fr;
   }
 }
-.section-contact > form input,
-.section-contact > form textarea {
+.contact-form input,
+.contact-form textarea {
   background-color: #f3f0ff;
   border: 1px solid grey;
   border-radius: 5px;
   padding: 10px;
   color: black;
 }
+.contact-form label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.contact-form label .error-msg {
+  display: block;
+  position: relative;
+  border: 1px solid #FF4532;
+  border-top: 5px solid #FF4532;
+  background-color: #ffc3bc;
+  padding: 2px 5px;
+  font-size: 0.8rem;
+  width: 90%;
+  margin: 0 auto -25px;
+}
+.contact-form label .error-msg::before {
+  position: absolute;
+  content: "";
+  top: -15px;
+  left: 10%;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent #FF4532 transparent;
+  transform: rotate(0deg);
+}
 @media only screen and (min-width: 1200px) {
-  .section-contact > form input,
-  .section-contact > form textarea {
+  .contact-form label,
+  .contact-form input,
+  .contact-form textarea {
     grid-column: span 2;
   }
-  .section-contact > form input[id=firstname], .section-contact > form input[id=lastname],
-  .section-contact > form textarea[id=firstname],
-  .section-contact > form textarea[id=lastname] {
+}
+@media only screen and (min-width: 1200px) {
+  .contact-form label[for=firstname],
+  .contact-form label[for=lastname] {
+    grid-column: span 1;
+    grid-row: 1;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .contact-form input[id=firstname],
+  .contact-form input[id=lastname] {
     grid-column: span 1;
     grid-row: 2;
   }
 }
-.section-contact > form textarea {
+.contact-form input.error,
+.contact-form textarea.error {
+  border: 1px solid #FF4532;
+  border-left: 5px solid #FF4532;
+  position: relative;
+}
+.contact-form textarea {
   height: 10rem;
 }
-.section-contact > form button {
+.contact-form button {
   margin: 20px 0;
   padding: 10px 20px;
   border: 2px solid black;
@@ -11458,12 +11502,12 @@ body {
   justify-self: center;
   background-color: #dad1fd;
 }
-.section-contact > form button:hover {
+.contact-form button:hover {
   cursor: pointer;
   background-color: #bfaffd;
 }
 @media only screen and (min-width: 992px) {
-  .section-contact > form button {
+  .contact-form button {
     justify-self: left;
   }
 }
