@@ -134,8 +134,8 @@ const formHandler = (e) => {
     }
 }
 
-form.addEventListener("focusout", inputHandler);
-form.addEventListener("submit", formHandler);
+form?.addEventListener("focusout", inputHandler);
+form?.addEventListener("submit", formHandler);
 
 
 /** 
@@ -146,23 +146,22 @@ form.addEventListener("submit", formHandler);
 const list = document.querySelectorAll('.subheader-list li');
 const listCount = list.length;
 
-function rotateHeader(prev, current) {
- 
-    list[prev].classList.toggle('show');
-    setTimeout(() => { list[current].classList.toggle('show')}, 1000);
+if (list.length >= 1) {
+    function rotateHeader(prev, current) {
+    
+        list[prev].classList.toggle('show');
+        setTimeout(() => { list[current].classList.toggle('show')}, 1000);
 
-    next = current + 1 >= listCount ? 0 : current + 1;
+        next = current + 1 >= listCount ? 0 : current + 1;
 
-    //Using setTimeout to call itself and repeat. To not block code execution.
+        //Using setTimeout to call itself and repeat. To not block code execution.
+        setTimeout(() => {
+            rotateHeader(current, next);
+        }, 5000);
+    }
+
+    // Delay the first call as one item already has the class for non-js view
     setTimeout(() => {
-        rotateHeader(current, next);
+        rotateHeader(0,1);
     }, 5000);
 }
-
-// Delay the first call as one item already has the class for non-js view
-setTimeout(() => {
-    rotateHeader(0,1);
-}, 5000);
-
-
-
