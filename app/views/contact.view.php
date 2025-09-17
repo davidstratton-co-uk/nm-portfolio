@@ -9,23 +9,23 @@
             <form class="contact-form" action="#" method="post">
                 <label for="firstname">
                     <span>First Name: (required)</span>
-                    <input type="text" id="firstname" name="firstname" autocomplete="given-name">
+                    <input type="text" id="firstname" name="enquiry_first_name" autocomplete="given-name">
                 </label>
                 <label for="lastname">
                     <span>Last Name: (required)</span>
-                    <input type="text" id="lastname" name="lastname" autocomplete="family-name">
+                    <input type="text" id="lastname" name="enquiry_last_name" autocomplete="family-name">
                 </label>
                 <label for="email">
                     <span>E-mail: (required)</span>
-                    <input type="text" id="email" name="email" autocomplete="email">
+                    <input type="text" id="email" name="enquiry_email" autocomplete="email">
                 </label>
                 <label for="subject">
                     <span>Subject: (required)</span>
-                    <input type="text" id="subject" name="subject">
+                    <input type="text" id="subject" name="enquiry_subject">
                 </label>
                 <label for="message">
                     <span>Message: (required)</span>
-                    <textarea id="message"></textarea>
+                    <textarea id="message" name="enquiry_content"></textarea>
                 </label>
                 <button type="submit">Submit</button>
             </form>
