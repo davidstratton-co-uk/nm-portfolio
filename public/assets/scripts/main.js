@@ -17,9 +17,9 @@ menuButton.addEventListener('click', (e) => {
 */
 
 const form = document.querySelector('.contact-form');
-const formInputs = document.querySelectorAll('.contact-form input, .contact-form textarea');
-const formEmail = document.querySelector('.contact-form input[id="email"]');
-const formButton = document.querySelector('.contact-form button');
+const formInputs = form.querySelectorAll('.contact-form input, .contact-form textarea');
+const formEmail = form.querySelector('.contact-form input[id="email"]');
+const formButton = form.querySelector('.contact-form button');
 
 const emailRegExp = /^[\w.!#$%&'*+/=?^`{|}~-]+@[a-z\d-]+(?:\.[a-z\d-]+)*$/i;
 
@@ -36,10 +36,7 @@ const addError = (input, errormsg) => {
 }
 
 const removeError = (input) => {
-    console.log(input);
-    console.log(input.nextElementSibling);
     if (input.nextElementSibling) {
-        console.log("this is triggers 1");
         input.classList.remove('error');
         input.nextElementSibling.remove();
     }
@@ -80,7 +77,6 @@ const isEmailValid = () => {
         addError(formEmail, "Invalid E-mail");
         return false;
     }
-    console.log("email remove is triggered");
     removeError(formEmail);
     return true;
 }
@@ -88,16 +84,13 @@ const isEmailValid = () => {
 const isInputValid = (input) => {
 
     if (!input.value) {
-        console.log("this is triggered adderror input");
         addError(input, `This field can not be empty.`);
         return false;
     } else {
-        console.log("this is triggered textcon  tent 2");
         removeError(input);
         return true;
     }
 }
-
 
 const inputHandler = (e) => {
     if (e.target.type === "text" || e.target.type === "textarea")  {
@@ -107,6 +100,39 @@ const inputHandler = (e) => {
             isInputValid(e.target);
         }
     }
+}
+
+const postForm = () => {
+    formButton.innerHTML = "Sending Enquiry..";
+
+    const params = {
+        enquiry_first_name: formInputs[0].value,
+        enquiry_last_name: formInputs[1].value,
+        enquiry_email: formInputs[2].value,
+        enquiry_subject: formInputs[3].value,
+        enquiry_content: formInputs[4].value
+    };
+
+    const options = {
+        method: "POST",
+        headers: {
+             "Content-Type": 'application/x-www-form-urlencoded'
+        },
+        body: new URLSearchParams(params) 
+    };
+
+    fetch( '../api/enquiry/create/', options )
+    .then( response => response.json() )
+    .then( response => {
+
+        if (response.status == "success") {
+            form.reset();
+            formButton.innerHTML = "Send Enquiry";
+        }
+
+        formMsg(response.status, response.message);
+
+    });
 }
 
 const formHandler = (e) => {
@@ -124,19 +150,14 @@ const formHandler = (e) => {
     }
 
     if (!formReady) {
-        formMsg("error", "Please correct errors shown in the form");
+        return formMsg("error", "Please correct errors shown in the form");
     } else {
-        for (let i = 0; i < formInputs.length; i++) {
-            removeError(formInputs[i]);
-            formInputs[i].value = "";
-        }
-        formMsg("success", "The form was submitted sucessfully");
+        postForm();
     }
 }
 
 form?.addEventListener("focusout", inputHandler);
 form?.addEventListener("submit", formHandler);
-
 
 /** 
  *  Sub-Header List Rotator

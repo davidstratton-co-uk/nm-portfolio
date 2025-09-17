@@ -11444,7 +11444,7 @@ body {
 }
 @media only screen and (min-width: 1200px) {
   .contact-form {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 .contact-form input,
@@ -11487,20 +11487,20 @@ body {
   .contact-form label,
   .contact-form input,
   .contact-form textarea {
-    grid-column: span 4;
+    grid-column: span 2;
   }
 }
 @media only screen and (min-width: 1200px) {
   .contact-form label[for=firstname],
   .contact-form label[for=lastname] {
-    grid-column: span 2;
+    grid-column: span 1;
     grid-row: 1;
   }
 }
 @media only screen and (min-width: 1200px) {
   .contact-form input[id=firstname],
   .contact-form input[id=lastname] {
-    grid-column: span 2;
+    grid-column: span 1;
     grid-row: 2;
   }
 }
@@ -11512,6 +11512,11 @@ body {
 }
 .contact-form textarea {
   height: 10rem;
+}
+.contact-form .contact-form-controls {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: max-content 1fr;
 }
 .contact-form button {
   padding: 10px 20px;
@@ -11539,6 +11544,7 @@ body {
   height: -moz-fit-content;
   height: fit-content;
   align-self: center;
+  margin: 0 0.5rem;
 }
 .contact-form .form-msg--warn strong, .contact-form .form-msg--error strong, .contact-form .form-msg--success strong {
   text-transform: uppercase;
@@ -11557,11 +11563,6 @@ body {
   }
   .contact-form .form-msg--warn span, .contact-form .form-msg--error span, .contact-form .form-msg--success span {
     display: inline;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .contact-form .form-msg--warn, .contact-form .form-msg--error, .contact-form .form-msg--success {
-    grid-column: span 3;
   }
 }
 .contact-form .form-msg--success {

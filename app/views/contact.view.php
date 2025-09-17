@@ -27,6 +27,8 @@
                     <span>Message: (required)</span>
                     <textarea id="message" name="enquiry_content"></textarea>
                 </label>
-                <button type="submit">Submit</button>
+                <div class="contact-form-controls">
+                    <button type="submit">Send Enquiry</button>
+                </div>
             </form>
         </section>

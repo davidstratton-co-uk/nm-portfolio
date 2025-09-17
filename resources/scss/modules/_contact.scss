@@ -78,7 +78,7 @@
     gap: 10px;
     
     @include mq.set-breakpoint('x-large') {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     input,
@@ -126,7 +126,7 @@
     textarea {
 
         @include mq.set-breakpoint('x-large') {
-            grid-column: span 4
+            grid-column: span 2
         }
     }
 
@@ -134,7 +134,7 @@
     label[for="lastname"] {
 
          @include mq.set-breakpoint('x-large') {
-            grid-column: span 2;
+            grid-column: span 1;
             grid-row: 1;
         }
      }
@@ -143,7 +143,7 @@
     input[id="lastname"] {
 
         @include mq.set-breakpoint('x-large') {
-            grid-column: span 2;
+            grid-column: span 1;
             grid-row: 2;
         }
     }
@@ -158,6 +158,12 @@
 
     textarea {
         height: 10rem;
+    }
+
+    .contact-form-controls {
+        grid-column: span 2;
+        display: grid;
+        grid-template-columns: max-content 1fr;
     }
 
     button {
@@ -190,6 +196,7 @@
         border: 1px solid grey;
         height: fit-content;
         align-self: center;
+        margin: 0 .5rem;
     
         strong {
             text-transform: uppercase;
@@ -211,10 +218,6 @@
             span {
                 display: inline;
             }
-        }
-
-        @include mq.set-breakpoint('x-large') {
-            grid-column: span 3;
         }
     }
     
