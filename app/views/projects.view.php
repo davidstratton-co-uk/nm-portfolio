@@ -2,40 +2,22 @@
             <div id="portfolio" class="section-projects">
                 <div class="project-list">
                     <article>
-                        <a href="https://davidstratton-co-uk.github.io/nm-html-css-assessment/"></a>
-                        <img src="./projects/1/project-1-thumbnail.png" alt="Mainpage of Project 1">
+                        <a href="https://netmatters.david-stratton.netmatters-scs.co.uk"></a>
+                        <img src="./projects/1/thumbnail.png" alt="Overview of the Netmatters Mirror Project">
                         <h3>Netmatters Site Mirror</h3>
-                        <p>Visit Project <i class="fa-solid fa-arrow-right"></i></p>
+                        <div><span>Visit Project</span><i class="fa-solid fa-arrow-right"></i></div>
                     </article>
                     <article>
-                        <a href="#"></a>
-                        <img src="./projects/2/project-2-thumbnail.png" alt="Purple Placeholder Image">
-                        <h3>Project 2</h3>
-                        <p>Visit Project <i class="fa-solid fa-arrow-right"></i></p>
+                        <a href="https://js-array.david-stratton.netmatters-scs.co.uk"></a>
+                        <img src="./projects/2/thumbnail.png" alt="Overview of the Javascript Project">
+                        <h3>Javascript Array Project</h3>
+                        <div><span>Visit Project</span><i class="fa-solid fa-arrow-right"></i></div>
                     </article>
                     <article>
-                        <a href="#"></a>
-                        <img src="./projects/3/project-3-thumbnail.png" alt="Purple Placeholder Image">
-                        <h3>Project 3</h3>
-                        <p>Visit Project <i class="fa-solid fa-arrow-right"></i></p>
-                    </article>
-                    <article>
-                        <a href="#"></a>
-                        <img src="./projects/4/project-4-thumbnail.png" alt="Purple Placeholder Image">
-                        <h3>Project 4</h3>
-                        <p>Visit Project <i class="fa-solid fa-arrow-right"></i></p>
-                    </article>
-                    <article>
-                        <a href="#"></a>
-                        <img src="./projects/5/project-5-thumbnail.png" alt="Purple Placeholder Image">
-                        <h3>Project 5</h3>
-                        <p>Visit Project <i class="fa-solid fa-arrow-right"></i></p>
-                    </article>
-                    <article>
-                        <a href="#"></a>
-                        <img src="./projects/6/project-6-thumbnail.png" alt="Purple Placeholder Image">
-                        <h3>Project 6</h3>
-                        <p>Visit Project <i class="fa-solid fa-arrow-right"></i></p>
+                        <a href="https://laravel.david-stratton.netmatters-scs.co.uk"></a>
+                        <img src="./projects/3/thumbnail.png" alt="Overview of the Laravel Project">
+                        <h3>Netmatters Site Mirror</h3>
+                        <div><span>Visit Project</span><i class="fa-solid fa-arrow-right"></i></div>
                     </article>
                 </div>
             </div>

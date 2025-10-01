@@ -18,6 +18,9 @@
                             <li>HTML</li>
                             <li>CSS</li>
                             <li>SASS/SCSS</li>
+                            <li>Javascript</li>
+                            <li>PHP</li>
+                            <li>Laravel</li>
                         </ul>
                     </div>
                 </div>
